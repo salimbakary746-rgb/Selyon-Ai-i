@@ -1,0 +1,141 @@
+
+```html
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Selyon AI</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+  }
+  header {
+    background-color: #004080;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  h1 {
+    margin: 0;
+  }
+  nav {
+    display: flex;
+    justify-content: center;
+    background-color: #0066cc;
+  }
+  nav a {
+    color: #fff;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+  nav a:hover {
+    background-color: #005cbf;
+  }
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  section {
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    flex: 1 1 300px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #004080;
+    color: #fff;
+    margin-top: 20px;
+  }
+  /* Styles za Button */
+  button {
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #005cbf;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Selyon AI</h1>
+  <p>AI yako ya msaada na kubuni</p>
+</header>
+
+<nav>
+  <a href="#logo">Kubuni Logo</a>
+  <a href="#chat">Jibu Maswali</a>
+  <a href="#treatise">Kutatua Matatizo</a>
+</nav>
+
+<main>
+  <!-- Sehemu za kazi -->
+  <section id="logo">
+    <h2>Kubuni Logo</h2>
+    <p>Hatua ya kuunda logo yako mwenyewe:</p>
+    <textarea id="logoInput" rows="4" style="width: 100%;" placeholder="Andika maoni au mchapishaji wa logo yako..."></textarea>
+    <button onclick="generateLogo()">Unda Logo</button>
+    <div id="logoResult" style="margin-top: 10px;"></div>
+  </section>
+
+  <section id="chat">
+    <h2>Jibu Maswali</h2>
+    <textarea id="question" rows="4" style="width: 100%;" placeholder="Uliza swali lako..."></textarea>
+    <button onclick="answerQuestion()">Jibu</button>
+    <div id="answerOutput" style="margin-top: 10px; min-height:50px; border:1px solid #ccc; padding:5px;"></div>
+  </section>
+
+  <section id="treatise">
+    <h2>Kutatua Matatizo</h2>
+    <p>Toa maelezo ya changamoto yako:</p>
+    <textarea id="problem" rows="4" style="width: 100%;"="Eleza tatizo lako..."></textarea>
+    <button onclick="provideSolution()">Toa Suluhisho</button>
+    <div id="solutionOutput" style="margin-top: 10px; min-height:50px; border:1px solid #ccc; padding:5px;"></div>
+  </section>
+</main>
+
+<footer>
+  &copy; 2023 Selyon AI. Haki zote zimehifadhiwa.
+</footer>
+
+<script>
+  // Kazi za JavaScript kufanyia kazi
+  function generateLogo() {
+    const input = document.getElementById('logoInput').value;
+    const resultDiv = document.getElementById('logoResult');
+    // Jinsi ya kuunda logo rahisi (badilisha kama unapenda)
+    resultDiv.innerHTML = `<p>Logo itakavyonekana kwa kutumia maoni yako: <strong>${input}</strong></p>`;
+  }
+
+  function answerQuestion() {
+    const question = document.getElementById('question').value;
+    const answerDiv = document.getElementById('answerOutput');
+    // Hii ni mfano rahisi, unaweza kuiboresha na AI halisi au API
+    answerDiv.innerHTML = `<p><em>Swali lako ni: </em>${question}<br/>Hivi ni jibu lisilokuwa rasmi kwa mfano.</p>`;
+  }
+
+  function provideSolution() {
+    const problem = document.getElementById('problem').value;
+    const solutionDiv = document.getElementById('solutionOutput');
+    // Hii ni mfano rahisi, unaweza kuiboresha na AI halisi au API
+    solutionDiv.innerHTML = `<p>Suluhisho kwa tatizo lako: <strong>Jaribu hatua hizi:</strong> kuboresha maelezo, etc.</p>`;
+  }
+</script>
+
+</body>
+</html>
+```
+
